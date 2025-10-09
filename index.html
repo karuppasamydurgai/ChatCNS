@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    
+   
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400&display=swap" rel="stylesheet">
+     <!--<link href="style.css" rel="stylesheet">-->
+     
+     
+     
+      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+      <!-- WEDS font Family-->
+  
+  <style>
+    
+    body {
+      /*background: #f0f0f0;*/
+      height : 80vh;
+      background : url('https://themazine.com/html/kabbo/images/bannar-shap-3.png') no-repeat top right;
+       height: 100%;
+        margin: 0;
+        padding: 0;
+      /*user-select: none;*/
+      /*touch-action: none;*/
+    }
+
+ 
+
+    /* Mobile menu button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        /*background: linear-gradient(270deg, #9f5de8, #7e2ee7, #ff6a88);*/
+         background: linear-gradient(270deg, #9f5de8, #7e2ee7, #ff6a88);
+        background-size: 600% 600%;
+        animation: gradientFlow 10s ease infinite;
+        padding: 15px 0;
+        text-align: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Animations */
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeSlide {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      transition: transform 0.3s;
+      z-index: 11;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s;
+    }
+
+    .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px,5px);
+    }
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px,-5px);
+    }
+
+    /* Mobile overlay menu */
+    @media (max-width: 768px) {
+      nav ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(75,108,183,0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+      }
+
+      nav ul.active {
+        transform: translateY(0);
+      }
+
+      .hamburger {
+        display: flex;
+      }
+      
+    .carousel-item img {
+        width: 100%;
+        height: 500px; /* adjust as needed */
+        object-fit: cover; /* full cover */
+        object-position: center; /* center portion focus */
+        transition: transform 0.5s ease; /* smooth zoom */
+    }
+    
+    
+  
+  
+    }
+    
+    
+    
+    
+    
+    
+     .countdown-container {
+      display: flex;
+      /*background: #5f9a8f;*/
+       background: linear-gradient(135deg, #f3faff);
+      color: #d933b2;
+      padding: 20px;
+      border-radius: 5px;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .title-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 20px;
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .title-box h2 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 32px;
+      margin: 10px 0 0;
+    }
+
+    .title-box span {
+      font-size: 14px;
+    }
+
+    .time-box {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #7e2ee7;
+      border-radius: 3px;
+      min-width: 80px;
+    }
+
+    @media (max-width: 768px) {
+      .countdown-container {
+        flex-direction: row;
+        gap: 15px;
+      }
+    }
+
+  .wedding-text {
+      text-align: center;
+    }
+
+    .wedding-text .intro {
+      font-size: 25px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .wedding-text .names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: #7e2ee7; /* orange color */
+      margin-bottom: 10px;
+    }
+
+    .wedding-text .date {
+      font-size: 18px;
+      color: #333;
+    }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    /*background-color: #fffafc;*/
+  }
+
+
+    
+      /* ---------- Invitation Card ---------- */
+  .invitation {
+      margin-top : 2%;
+    position: relative;
+    background: #fff;
+    padding: 70px 40px;
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    border: 4px solid transparent;
+    border-image: linear-gradient(120deg, #d4af37, #f1e1a6, #a67c00, #d4af37);
+    border-image-slice: 1;
+    /*animation: borderGlow 4s linear infinite;*/
+  }
+
+ 
+
+  /* corner cut style */
+  .invitation::before, .invitation::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /*border: 3px solid #a67c00;*/
+    transition: transform 0.5s ease;
+  }
+  .invitation::before {
+    top: -3px;
+    left: -3px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 20px;
+  }
+  .invitation::after {
+    bottom: -3px;
+    right: -3px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 20px;
+  }
+  .invitation:hover::before {
+    transform: translate(-4px, -4px);
+  }
+  .invitation:hover::after {
+    transform: translate(4px, 4px);
+  }
+
+  /* decorative symbols */
+  .decor {
+    font-size: 28px;
+    color: #b48a00;
+    letter-spacing: 8px;
+    margin: 25px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+  .decor.bottom { animation-delay: 2.2s; }
+
+  /* text fade-in */
+  h1, p {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 1.5s ease forwards;
+  }
+  h1 { 
+    font-family: "Great Vibes", cursive;
+    font-size: 42px;
+    color: #000;
+    animation-delay: 0.5s;
+  }
+  p:nth-of-type(1) { animation-delay: 0.8s; }
+  p:nth-of-type(2) { animation-delay: 1s; }
+  p:nth-of-type(3) { animation-delay: 1.2s; }
+  p:nth-of-type(4) { animation-delay: 1.4s; }
+  p:nth-of-type(5) { animation-delay: 1.6s; }
+
+  /* fade effects */
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  strong {
+    color: #000;
+    font-weight: 700;
+  }
+
+  @media (max-width: 500px) {
+    h1 { font-size: 32px; }
+    p { font-size: 16px; }
+    .invitation { padding: 40px 20px; }
+  }
+  
+   .wedding_and{
+        color:red; 
+        font-family: 'Great Vibes', cursive;
+ }
+   body {
+      /*background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);*/
+      text-align: center;
+       font-family: 'Great Vibes', cursive;
+      /*padding: 50px 20px;*/
+    }
+
+    .wedding_text {
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 20px;
+      padding: 40px 20px;
+      display: inline-block;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .wedding_text_p {
+      font-size: 22px;
+      color: #9b1b30;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+       font-family: 'Dancing Script', cursive;
+    }
+
+    .wedding_text_h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Great Vibes', cursive;
+      color: #b3005e;
+      font-size: 55px;
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    .wedding_text_h2 div:nth-child(1),.wedding_text_h2 div:nth-child(2),.wedding_text_h2 div:nth-child(3) {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #6f42c1;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      .wedding_text_h2 {
+        font-size: 40px;
+      }
+    }
+    
+     .coundown_wrapper{
+      
+      width : 100%;
+      height : 100px;
+      align-items : center;
+  }
+  .countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    
+    text-align: center;
+  }
+
+  .time-box {
+    background: white;
+    color: red;
+    border-radius: 12px;
+    padding: 15px 25px;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    min-width: 70px;
+  }
+
+  .time-box h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .time-box span {
+    /*font-size: 0.9rem;*/
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  
+  .counter_time{
+      width:100%;
+      height : 200px;
+      background : #c372e312;
+        display :flex;
+        justify-content : center;
+        align-items : center;
+  }
+  
+       @media (max-width: 600px) {
+        .time-box {
+          padding: 5px 10px;
+          min-width: 30px;
+        }
+        .time-box h2 {
+          font-size: 1.5rem;
+        }
+        .time-box span {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+    
+    
+    .section_title p:nth-child(1){
+            font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #6f42c1;
+      margin: 8px 0;
+        }
+        
+        .titles{
+            font-family: 'Playfair Display', serif;
+          font-size: 28px;
+          color: #6f42c1;
+          margin: 8px 0;
+        }
+        .address_details {
+            font-family: 'Lora', serif;
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+         }  
+  /* Navbar */
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Logo image */
+  .brand img {
+    height: 55px;
+    width: auto;
+  }
+
+  /* Menu */
+  .menu {
+    display: flex;
+    gap: 25px;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .menu a:hover {
+    color: #d47a5d;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: #b56a4c;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  /* Mobile menu */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 70px;
+      right: 25px;
+      width: 200px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .menu a {
+      padding: 8px 0;
+      font-size: 16px;
+    }
+  }    
+  </style>
+  
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+</style>
+  
+
+</head>
+<body>
+
+ <nav>
+     
+     <div class='brand '>
+         
+         <img src='icons8-love.gif'>
+     <!--<img src='icons8-love.gif'>-->
+</div>
+
+  <div class="brand">
+    <img src="navbar-brand-mobile.jpg" alt="We're Getting Married">
+   
+  </div>
+
+<div class='brand '>
+     <a href='Kishore_Weds_Haritha_invitation.pdf' class=' text-danger'><i class="fa-solid fa-download"></i> Download Invitation</a>
+</div>
+ 
+</nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+<main>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style='height:80%'>
+ 
+  <div class="carousel-inner" >
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="https://sundarraj.nimi.co.in/kishore/images/Slider1.jpg" class="d-block w-100" alt="...">
+    </div>
+ 
+  </div>
+ 
+</div>
+
+
+
+<center><div class="invitation">
+  <div class="decor top">❦ ❦ ❦</div>
+  
+  <p>WITH GRATITUDE AND JOY, WE INVITE YOU TO SHARE IN THE CELEBRATION OF OUR WEDDING CERMONY</p>
+  <div class="decor bottom">❦ ❦ ❦</div>
+</div></center>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+<div class='wedding_text mt-5 mb-5'>
+    <p class='h3 wedding_text_p'>
+        Save the Date
+    </p>
+    <div class='wedding_text_h2' style='display:flex;flex-direction:column;justify-align:center;' >
+        <div class=''>Kishore Kumar</div>
+        <div class=''><img src='weds.jpg' style='width:75px;height:75px;'></div>
+        <div class=''>Haritha</div>
+    </div>
+    <p class='h3 wedding_text_p'>
+        Sunday, 26th October 2026
+    </p>
+</div>
+
+
+  
+  <div class='counter_time'>
+  <div class='coundown_wrapper '>
+      <div class="countdown ">
+          
+      <div class="time-box">
+        <h2 id="days">00</h2>
+        <span class=''>Days</span>
+      </div>
+      <div class="time-box">
+        <h2 id="hours">00</h2>
+        <span class=''>Hours</span>
+      </div>
+      <div class="time-box">
+        <h2 id="minutes">00</h2>
+        <span class=''>Minutes</span>
+      </div>
+      <div class="time-box">
+        <h2 id="seconds">00</h2>
+        <span class=''>Seconds</span>
+      </div>
+    </div>
+    </div>
+</div>
+  
+  
+ <div class='venue_div' >
+    <div class="container  mt-2 mb-2">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+        
+        
+           
+                <div class="section_title text-center mt-1">
+                    <p class='h1 p-2 ' style='color:#7e2ee7; '>Venue</p>
+                </div>
+            
+           <center> <div class="service-area-menu">
+              
+              <div class='row col-12'>
+                  <div class='col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4'>
+                        <div class="ceromony-img">
+                            <img src="images/1.jpg" alt="" style='' class='img-thumbnail w-100'>
+                        </div>
+                  </div>
+                  <div class='row col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8'>
+                      <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 border border-dark p-4 m-2' style='display:flex;flex-direction:column;justify-align:center;' >
+                            <p class='p-2 titles' style='color:#7e2ee7; '>Reception</p>
+                            <div class='h5 p-2 address_details'>Saturday, 25 October 2025<br>7.00 PM onwards</div>
+                            <div class='h5 p-2 address_details'>Kalyani Thirumana Mandapam Mangadu </div>
+                            <div><a class="popup-gmaps text-primary h5 p-2  btn btn-primary text-light address_details" href="https://maps.app.goo.gl/XusK3jhKB2FJS9ZF9" target='_blank' >See Location  <i class="fa-solid fa-location-dot"></i></a></div>
+                      </div>
+                      <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 border border-dark p-4 m-2'  style='display:flex;flex-direction:column;justify-align:center;'>
+                            <p class='p-2 titles' style='color:#7e2ee7;'>Wedding</p>
+                            <div class='h5 p-2 address_details'>Sunday, 26 October 2025<br> 9.00 to 10.30 AM</div>
+                            <div class='h5 p-2 address_details'>Kalyani Thirumana Mandapam Mangadu </div>
+                            <div><a class="popup-gmaps text-primary h5 p-2 btn btn-primary text-light address_details" href="https://maps.app.goo.gl/XusK3jhKB2FJS9ZF9" target='_blank' >See Location <i class="fa-solid fa-location-dot"></i></a></div>
+                      </div>
+                  </div>
+              </div>
+              
+                
+            </div></center>
+          
+       
+        
+  <hr>
+  
+  
+ 
+<div class='row'>
+    <div class='container'>
+        <div class='col-12 col-md-12 col-sm-12 col-lg-8 col-xl-8'>
+            <center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3775.749419538439!2d80.1102829!3d13.0293928!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526032de7efd5f%3A0xb5d759ba3935cfd1!2sKalyani%20Thirumana%20Mandapam%20Mangadu%20%2F%20Marriage%20Hall!5e1!3m2!1sen!2sin!4v1759543945060!5m2!1sen!2sin" style="border:0; height:300px; width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+ </div>
+  <audio id="bgm" loop>
+    <source src="Mangalyam-Tantunanena.mp3" type="audio/mpeg">
+    <!--Your browser does not support the audio element.-->
+  </audio>
+  </main>
+
+<style>
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      animation: floatUp 8s linear forwards;
+      opacity: 0.9;
+      filter: drop-shadow(0 0 6px rgba(255, 100, 150, 0.6));
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+</style>
+ <script>
+    // ❤️ Create heart function
+    function createHeart(x, y) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤";
+      const color = Math.random() > 0.5 ? "var(--heart1)" : "var(--heart2)";
+      heart.style.color = 'red';
+      heart.style.left = x + "px";
+      heart.style.top = y + "px";
+      heart.style.fontSize = 20 + Math.random() * 10 + "px";
+      const duration = 9 + Math.random() * 5;
+      heart.style.animationDuration = duration + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), duration * 1000);
+    }
+
+    // ❤️ Auto floating hearts from bottom
+    function autoHeart() {
+      const x = Math.random() * window.innerWidth;
+      const y = window.innerHeight + 30;
+      createHeart(x, y);
+    }
+    setInterval(autoHeart, 400);
+
+    // ❤️ Single heart on click or touch
+    window.addEventListener("click", (e) => {
+      createHeart(e.clientX, e.clientY);
+    });
+
+    window.addEventListener("touchstart", (e) => {
+      const touch = e.touches[0];
+      createHeart(touch.clientX, touch.clientY);
+    }, { passive: true });
+  </script>
+
+ <script>
+    // Set target date (change here for your event)
+    const targetDate = new Date("Oct 26, 2025 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days.toString().padStart(2, "0");
+      document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+
+      if (distance < 0) {
+        document.querySelector(".countdown-container").innerHTML = "<h2>It's The Big Day!</h2>";
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    
+      window.addEventListener('load', () => {
+      const audio = document.getElementById('bgm');
+      audio.play().catch(() => {
+        console.log("Autoplay failed, user interaction needed.");
+      });
+    });
+    
+    document.addEventListener('click', () => {
+  document.getElementById('bgm').play();
+});
+  </script>
+  
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
