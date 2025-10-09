@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     
-   
+     <!--<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">-->
+     
+     
      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400&display=swap" rel="stylesheet">
      <!--<link href="style.css" rel="stylesheet">-->
      
@@ -19,11 +21,17 @@
       <!-- WEDS font Family-->
   
   <style>
-    
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
       /*background: #f0f0f0;*/
       height : 80vh;
-      background : url('https://themazine.com/html/kabbo/images/bannar-shap-3.png') no-repeat top right;
+      /*background : url('https://themazine.com/html/kabbo/images/bannar-shap-3.png') no-repeat top right;*/
        height: 100%;
         margin: 0;
         padding: 0;
@@ -31,7 +39,61 @@
       /*touch-action: none;*/
     }
 
- 
+   /* Navbar style */
+    /*nav {*/
+      /*background: linear-gradient(270deg, #ff7eb3, #ff758c, #ff6a88);*/
+      /*background: linear-gradient(270deg, #9f5de8, #7e2ee7, #ff6a88);*/
+      /*background: linear-gradient(337deg, #9f5de8, #7e2ee7, #ff6ae6);*/
+    /*  background : linear-gradient(337deg, #9f5de8, #7e2ee7, #8c6affcf);*/
+    /*  background-size: 600% 600%;*/
+      /*animation: gradientFlow 4s ease infinite;  */
+    /*  padding: 12px 30px;*/
+    /*  display: flex;*/
+    /*  justify-content: space-between;*/
+    /*  align-items: center;*/
+    /*  color: white;*/
+    /*  position: sticky;*/
+    /*  top: 0;*/
+    /*  z-index: 1000;*/
+    /*}*/
+
+    /*.logo {*/
+      /*font-size: 22px;*/
+    /*   font-size: 35px;*/
+    /*  font-family: 'Great Vibes', cursive;*/
+    /*  font-weight: bold;*/
+    /*  letter-spacing: 1px;*/
+    /*  animation: fadeIn 1.5s ease-in-out; */
+    /*}*/
+
+    /*.nav-links {*/
+    /*  display: flex;*/
+    /*  gap: 20px;*/
+    /*}*/
+
+    /*.nav-links a {*/
+    /*    font-family: 'Dancing Script', cursive;*/
+    /*  font-size: 28px;*/
+    /*  text-decoration: none;*/
+    /*  color: white;*/
+    /*  font-weight: 500;*/
+    /*  opacity: 0;*/
+    /*  transform: translateY(-10px);*/
+    /*  animation: fadeSlide 1s forwards;*/
+    /*}*/
+
+    /* Each link delay */
+    /*.nav-links a:nth-child(1){ animation-delay: 0.5s; }*/
+    /*.nav-links a:nth-child(2){ animation-delay: 0.8s; }*/
+    /*.nav-links a:nth-child(3){ animation-delay: 1.1s; }*/
+    /*.nav-links a:nth-child(4){ animation-delay: 1.4s; }*/
+    /*.nav-links a:nth-child(5){ animation-delay: 1.7s; }*/
+
+    /*.nav-links a:hover {*/
+    /*  color: #ffe6ec;*/
+    /*  transform: scale(1.1);*/
+    /*  transition: 0.3s;*/
+    /*}*/
 
     /* Mobile menu button */
     .menu-toggle {
@@ -196,14 +258,36 @@
       min-width: 80px;
     }
 
+    /*.time-box h3 {*/
+    /*  font-size: 28px;*/
+    /*  margin: 0;*/
+    /*  color : '#7e2ee7';*/
+    /*  font-family: 'Georgia', serif;*/
+    /*}*/
+
+    /*.time-box span {*/
+    /*  display: block;*/
+    /*  font-size: 12px;*/
+    /*  margin-top: 5px;*/
+    /*  color : red;*/
+      /*letter-spacing: 1px;*/
+    /*}*/
+
     @media (max-width: 768px) {
       .countdown-container {
         flex-direction: row;
         gap: 15px;
       }
     }
-
-  .wedding-text {
+    
+  </style>
+  
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+</style>
+  
+  <style>
+      .wedding-text {
       text-align: center;
     }
 
@@ -224,7 +308,27 @@
       font-size: 18px;
       color: #333;
     }
+  </style>
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
   * {
     margin: 0;
     padding: 0;
@@ -236,238 +340,6 @@
     /*background-color: #fffafc;*/
   }
 
-
-    
-      /* ---------- Invitation Card ---------- */
-  .invitation {
-      margin-top : 2%;
-    position: relative;
-    background: #fff;
-    padding: 70px 40px;
-    max-width: 700px;
-    width: 90%;
-    text-align: center;
-    color: #333;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
-    border: 4px solid transparent;
-    border-image: linear-gradient(120deg, #d4af37, #f1e1a6, #a67c00, #d4af37);
-    border-image-slice: 1;
-    /*animation: borderGlow 4s linear infinite;*/
-  }
-
- 
-
-  /* corner cut style */
-  .invitation::before, .invitation::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    /*border: 3px solid #a67c00;*/
-    transition: transform 0.5s ease;
-  }
-  .invitation::before {
-    top: -3px;
-    left: -3px;
-    border-right: none;
-    border-bottom: none;
-    border-top-left-radius: 20px;
-  }
-  .invitation::after {
-    bottom: -3px;
-    right: -3px;
-    border-left: none;
-    border-top: none;
-    border-bottom-right-radius: 20px;
-  }
-  .invitation:hover::before {
-    transform: translate(-4px, -4px);
-  }
-  .invitation:hover::after {
-    transform: translate(4px, 4px);
-  }
-
-  /* decorative symbols */
-  .decor {
-    font-size: 28px;
-    color: #b48a00;
-    letter-spacing: 8px;
-    margin: 25px 0;
-    opacity: 0;
-    animation: fadeIn 1.5s ease forwards;
-  }
-  .decor.bottom { animation-delay: 2.2s; }
-
-  /* text fade-in */
-  h1, p {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeUp 1.5s ease forwards;
-  }
-  h1 { 
-    font-family: "Great Vibes", cursive;
-    font-size: 42px;
-    color: #000;
-    animation-delay: 0.5s;
-  }
-  p:nth-of-type(1) { animation-delay: 0.8s; }
-  p:nth-of-type(2) { animation-delay: 1s; }
-  p:nth-of-type(3) { animation-delay: 1.2s; }
-  p:nth-of-type(4) { animation-delay: 1.4s; }
-  p:nth-of-type(5) { animation-delay: 1.6s; }
-
-  /* fade effects */
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  strong {
-    color: #000;
-    font-weight: 700;
-  }
-
-  @media (max-width: 500px) {
-    h1 { font-size: 32px; }
-    p { font-size: 16px; }
-    .invitation { padding: 40px 20px; }
-  }
-  
-   .wedding_and{
-        color:red; 
-        font-family: 'Great Vibes', cursive;
- }
-   body {
-      /*background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);*/
-      text-align: center;
-       font-family: 'Great Vibes', cursive;
-      /*padding: 50px 20px;*/
-    }
-
-    .wedding_text {
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 20px;
-      padding: 40px 20px;
-      display: inline-block;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      font-family: 'Playfair Display', serif;
-    }
-
-    .wedding_text_p {
-      font-size: 22px;
-      color: #9b1b30;
-      font-weight: bold;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-       font-family: 'Dancing Script', cursive;
-    }
-
-    .wedding_text_h2 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Great Vibes', cursive;
-      color: #b3005e;
-      font-size: 55px;
-      line-height: 1.2;
-      margin: 20px 0;
-    }
-
-    .wedding_text_h2 div:nth-child(1),.wedding_text_h2 div:nth-child(2),.wedding_text_h2 div:nth-child(3) {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: #6f42c1;
-      margin: 8px 0;
-    }
-
-    @media (max-width: 600px) {
-      .wedding_text_h2 {
-        font-size: 40px;
-      }
-    }
-    
-     .coundown_wrapper{
-      
-      width : 100%;
-      height : 100px;
-      align-items : center;
-  }
-  .countdown {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    
-    text-align: center;
-  }
-
-  .time-box {
-    background: white;
-    color: red;
-    border-radius: 12px;
-    padding: 15px 25px;
-    
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    min-width: 70px;
-  }
-
-  .time-box h2 {
-    margin: 0;
-    font-size: 2rem;
-  }
-
-  .time-box span {
-    /*font-size: 0.9rem;*/
-    font-size: 22px;
-    text-transform: uppercase;
-  }
-  
-  .counter_time{
-      width:100%;
-      height : 200px;
-      background : #c372e312;
-        display :flex;
-        justify-content : center;
-        align-items : center;
-  }
-  
-       @media (max-width: 600px) {
-        .time-box {
-          padding: 5px 10px;
-          min-width: 30px;
-        }
-        .time-box h2 {
-          font-size: 1.5rem;
-        }
-        .time-box span {
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-    }
-    
-    
-    .section_title p:nth-child(1){
-            font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: #6f42c1;
-      margin: 8px 0;
-        }
-        
-        .titles{
-            font-family: 'Playfair Display', serif;
-          font-size: 28px;
-          color: #6f42c1;
-          margin: 8px 0;
-        }
-        .address_details {
-            font-family: 'Lora', serif;
-            font-size: 18px;
-            color: #444;
-            line-height: 1.6;
-         }  
   /* Navbar */
   nav {
     width: 100%;
@@ -551,14 +423,8 @@
       padding: 8px 0;
       font-size: 16px;
     }
-  }    
-  </style>
-  
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+  }
 </style>
-  
-
 </head>
 <body>
 
@@ -571,14 +437,27 @@
 </div>
 
   <div class="brand">
-    <img src="navbar-brand-mobile.jpg" alt="We're Getting Married">
+    <img src="img/navbar-brand-mobile.jpg" alt="We're Getting Married">
    
   </div>
 
 <div class='brand '>
      <a href='Kishore_Weds_Haritha_invitation.pdf' class=' text-danger'><i class="fa-solid fa-download"></i> Download Invitation</a>
 </div>
- 
+  <!--<div class="hamburger" id="hamburger">-->
+  <!--  <span></span>-->
+  <!--  <span></span>-->
+  <!--  <span></span>-->
+  <!--</div>-->
+
+  <!--<div class="menu" id="menu">-->
+  <!--  <a href="#couple">The Couple</a>-->
+  <!--  <a href="#events">Events</a>-->
+  <!--  <a href="#story">Love Story</a>-->
+  <!--  <a href="#photos">Photos</a>-->
+  <!--  <a href="#gifts">Wedding Gifts</a>-->
+  <!--  <a href="#rsvp">RSVP</a>-->
+  <!--</div>-->
 </nav>
 
   <script>
@@ -589,17 +468,226 @@
 
 <main>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style='height:80%'>
- 
+  <!--<div class="carousel-indicators">-->
+  <!--  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+  <!--  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+  <!--  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+  <!--</div>-->
   <div class="carousel-inner" >
     <div class="carousel-item active" data-bs-interval="5000">
       <img src="https://sundarraj.nimi.co.in/kishore/images/Slider1.jpg" class="d-block w-100" alt="...">
     </div>
- 
+    <!--<div class="carousel-item" data-bs-interval="5000">-->
+    <!--  <img src="https://sundarraj.nimi.co.in/kishore/img/slider/kishore.jpg" class="d-block w-100" alt="...">-->
+    <!--</div>-->
+    <!--<div class="carousel-item" data-bs-interval="5000">-->
+    <!--  <img src="https://sundarraj.nimi.co.in/kishore/img/slider/kishore.jpg" class="d-block w-100" alt="...">-->
+    <!--</div>-->
   </div>
- 
+  <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">-->
+  <!--  <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+  <!--  <span class="visually-hidden">Previous</span>-->
+  <!--</button>-->
+  <!--<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">-->
+  <!--  <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+  <!--  <span class="visually-hidden">Next</span>-->
+  <!--</button>-->
 </div>
 
+<style>
+    /*.para{*/
+        /*background : url('Kishore_Haritha1.png') no-repeat;*/
+    /*    background : #8d00ff1f;*/
+      
+    /*}*/
+    /*.para_p{*/
+        /*font-family: "Nunito", sans-serif;*/
+    /*    font-family: 'Playfair Display', serif;*/
+    /*    font-size:28px;*/
+    /*    color:black;*/
+    /*    text-shadow: 1px 1px 2px #7e2ee7;*/
+    /*    text-align:center;*/
+        
+        
+          /*font-family: 'Playfair Display', serif;*/
+          /*font-size: 28px;*/
+          /*color: #6f42c1;*/
+          /*margin: 8px 0;*/
+    /*}*/
+    
+    /* .card {*/
+    /*  width: 90%;*/
+    /*  max-width: 600px;*/
+    /*  background: white;*/
+      /*border: 2px solid #000;*/
+    /*  padding: 40px;*/
+    /*  position: relative;*/
+    /*  text-align: center;*/
+    /*  box-shadow: 0 4px 20px rgba(0,0,0,0.1);*/
+    /*}*/
 
+    /* Corner border style */
+    /*.card::before, .card::after {*/
+    /*  content: "";*/
+    /*  position: absolute;*/
+    /*  width: 40px;*/
+    /*  height: 40px;*/
+      /*border: 2px solid #000;*/
+    /*}*/
+
+    /*.card::before {*/
+    /*  top: -2px;*/
+    /*  left: -2px;*/
+    /*  border-right: none;*/
+    /*  border-bottom: none;*/
+    /*  border-radius: 0 0 30px 0;*/
+    /*}*/
+
+    /*.card::after {*/
+    /*  bottom: -2px;*/
+    /*  right: -2px;*/
+    /*  border-left: none;*/
+    /*  border-top: none;*/
+    /*  border-radius: 30px 0 0 0;*/
+    /*}*/
+
+    /*.decor {*/
+    /*  font-size: 24px;*/
+    /*  margin: 20px 0;*/
+    /*}*/
+
+    /*.decor::before, .decor::after {*/
+    /*  content: "❦";*/
+    /*  color: #000;*/
+    /*  margin: 0 10px;*/
+    /*}*/
+
+    /*.card h2 {*/
+    /*  font-family: "Great Vibes", cursive;*/
+    /*  font-size: 28px;*/
+    /*  margin-bottom: 10px;*/
+    /*}*/
+
+    /*.card p {*/
+    /*  font-size: 18px;*/
+    /*  line-height: 1.6;*/
+    /*  margin: 8px 0;*/
+    /*}*/
+
+    /*@media (max-width: 500px) {*/
+    /*  .card {*/
+    /*    padding: 20px;*/
+    /*  }*/
+    /*  .card p {*/
+    /*    font-size: 16px;*/
+    /*  }*/
+    /*  .decor {*/
+    /*    font-size: 20px;*/
+    /*  }*/
+    /*}*/
+    
+      /* ---------- Invitation Card ---------- */
+  .invitation {
+      margin-top : 2%;
+    position: relative;
+    background: #fff;
+    padding: 70px 40px;
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    border: 4px solid transparent;
+    border-image: linear-gradient(120deg, #d4af37, #f1e1a6, #a67c00, #d4af37);
+    border-image-slice: 1;
+    /*animation: borderGlow 4s linear infinite;*/
+  }
+
+  /* border shimmer animation */
+  /*@keyframes borderGlow {*/
+  /*  0%   { border-image-source: linear-gradient(120deg, #d4af37, #f1e1a6, #a67c00, #d4af37); }*/
+  /*  50%  { border-image-source: linear-gradient(300deg, #a67c00, #f8e89e, #d4af37, #a67c00); }*/
+  /*  100% { border-image-source: linear-gradient(120deg, #d4af37, #f1e1a6, #a67c00, #d4af37); }*/
+  /*}*/
+
+  /* corner cut style */
+  .invitation::before, .invitation::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /*border: 3px solid #a67c00;*/
+    transition: transform 0.5s ease;
+  }
+  .invitation::before {
+    top: -3px;
+    left: -3px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 20px;
+  }
+  .invitation::after {
+    bottom: -3px;
+    right: -3px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 20px;
+  }
+  .invitation:hover::before {
+    transform: translate(-4px, -4px);
+  }
+  .invitation:hover::after {
+    transform: translate(4px, 4px);
+  }
+
+  /* decorative symbols */
+  .decor {
+    font-size: 28px;
+    color: #b48a00;
+    letter-spacing: 8px;
+    margin: 25px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+  .decor.bottom { animation-delay: 2.2s; }
+
+  /* text fade-in */
+  h1, p {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 1.5s ease forwards;
+  }
+  h1 { 
+    font-family: "Great Vibes", cursive;
+    font-size: 42px;
+    color: #000;
+    animation-delay: 0.5s;
+  }
+  p:nth-of-type(1) { animation-delay: 0.8s; }
+  p:nth-of-type(2) { animation-delay: 1s; }
+  p:nth-of-type(3) { animation-delay: 1.2s; }
+  p:nth-of-type(4) { animation-delay: 1.4s; }
+  p:nth-of-type(5) { animation-delay: 1.6s; }
+
+  /* fade effects */
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  strong {
+    color: #000;
+    font-weight: 700;
+  }
+
+  @media (max-width: 500px) {
+    h1 { font-size: 32px; }
+    p { font-size: 16px; }
+    .invitation { padding: 40px 20px; }
+  }
+</style>
 
 <center><div class="invitation">
   <div class="decor top">❦ ❦ ❦</div>
@@ -608,9 +696,86 @@
   <div class="decor bottom">❦ ❦ ❦</div>
 </div></center>
 
+  
+<!--<div class='para p-5'>-->
+<!--    <p class='para_p'>WITH GRATITUDE AND JOY, WE INVITE YOU TO SHARE IN THE CELEBRATION OF OUR WEDDING CERMONY</p>-->
+<!--</div>-->
+ 
+ 
+ <style>
+ .wedding_and{
+        color:red; 
+        font-family: 'Great Vibes', cursive;
+ }
+     
+ </style>
+<!--<div class="wedding-text mt-5 mb-5">-->
+    <!--<img src='Kishore_Haritha1.png' style='background-size:cover;background-repeat:no-repeat;'>-->
+<!--    <div class="intro" style='font-size:24px;  text-shadow: 1px 1px 2px gray;'>The wedding of</div>-->
+<!--    <div class=''>-->
+<!--        <p style='font-size:50px;  text-shadow: 1px 1px 2px #7e2ee7;'>Kishore Kumar</p>-->
+<!--        <p>WEDS</p>-->
+<!--        <p style='font-size:50px;  text-shadow: 1px 1px 2px #7e2ee7;'>Haritha</p>-->
+<!--    </div>-->
+<!--    <div class="names" style='font-size:50px;  text-shadow: 1px 1px 2px #7e2ee7;'> <span class='wedding_and'></span> </div>-->
+<!--    <div class="date" style='font-size:24px;  text-shadow: 1px 1px 2px gray;'>Sunday, 26th OCT 2025</div>-->
+<!--  </div>-->
+
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
 
+
+ body {
+      /*background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);*/
+      text-align: center;
+       font-family: 'Great Vibes', cursive;
+      /*padding: 50px 20px;*/
+    }
+
+    .wedding_text {
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 20px;
+      padding: 40px 20px;
+      display: inline-block;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .wedding_text_p {
+      font-size: 22px;
+      color: #9b1b30;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+       font-family: 'Dancing Script', cursive;
+    }
+
+    .wedding_text_h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Great Vibes', cursive;
+      color: #b3005e;
+      font-size: 55px;
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    .wedding_text_h2 div:nth-child(1),.wedding_text_h2 div:nth-child(2),.wedding_text_h2 div:nth-child(3) {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #6f42c1;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      .wedding_text_h2 {
+        font-size: 40px;
+      }
+    }
+</style>
 
 <div class='wedding_text mt-5 mb-5'>
     <p class='h3 wedding_text_p'>
@@ -626,7 +791,105 @@
     </p>
 </div>
 
+<!--<div class="countdown-container mt-3">-->
+<!--    <div class='row col-12 col-sm-12 col-md-12 col-lg-12 col-xm-12 col-xl-12  border border-dark'>-->
+<!--        <div class='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>-->
+<!--            <p id="days"><b>00</b></p>-->
+<!--            <span >DAYS</span>-->
+<!--        </div>-->
+<!--        <div class='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>-->
+<!--            <p id="hours"><b>00</b></p>-->
+<!--      <span>HOURS</span>-->
+<!--        </div>-->
+<!--        <div class='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>-->
+<!--             <p id="minutes"><b>00</b></p>-->
+<!--      <span>MINUTES</span>-->
+<!--        </div>-->
+<!--        <div class='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>-->
+<!--             <p id="seconds"><b>00</b></p>-->
+<!--      <span class=''>SECONDS</span>-->
+<!--        </div>-->
+<!--    </div>-->
+    
+    <!--<div class="time-box">-->
+      
+    <!--</div>-->
+    <!--<div class="time-box">-->
+    <!--  <p id="hours"><b>00</b></p>-->
+    <!--  <span><b>HOURS</b></span>-->
+    <!--</div>-->
+    <!--<div class="time-box">-->
+    <!--  <p id="minutes"><b>00</b></p>-->
+    <!--  <span><b>MINUTES</b></span>-->
+    <!--</div>-->
+    <!--<div class="time-box">-->
+    <!--  <p id="seconds"><b>00</b></p>-->
+    <!--  <span class=''><b>SECONDS</b></span>-->
+<!--    </div>-->
 
+  <!--</div>-->
+  
+  <style>
+  
+  .coundown_wrapper{
+      
+      width : 100%;
+      height : 100px;
+      align-items : center;
+  }
+  .countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    
+    text-align: center;
+  }
+
+  .time-box {
+    background: white;
+    color: red;
+    border-radius: 12px;
+    padding: 15px 25px;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    min-width: 70px;
+  }
+
+  .time-box h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .time-box span {
+    /*font-size: 0.9rem;*/
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  
+  .counter_time{
+      width:100%;
+      height : 200px;
+      background : #c372e312;
+        display :flex;
+        justify-content : center;
+        align-items : center;
+  }
+  
+       @media (max-width: 600px) {
+        .time-box {
+          padding: 5px 10px;
+          min-width: 30px;
+        }
+        .time-box h2 {
+          font-size: 1.5rem;
+        }
+        .time-box span {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+  </style>
   
   <div class='counter_time'>
   <div class='coundown_wrapper '>
@@ -655,6 +918,28 @@
   
  <div class='venue_div' >
     <div class="container  mt-2 mb-2">
+        <style>
+        
+        .section_title p:nth-child(1){
+            font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #6f42c1;
+      margin: 8px 0;
+        }
+        
+        .titles{
+            font-family: 'Playfair Display', serif;
+          font-size: 28px;
+          color: #6f42c1;
+          margin: 8px 0;
+        }
+        .address_details {
+            font-family: 'Lora', serif;
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+         }
+        </style>
         
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
         
@@ -690,7 +975,18 @@
               
                 
             </div></center>
-          
+            <!--<div class="Ceremony-wrap">-->
+            <!--    <div class="row">-->
+            <!--        <div class="col-lg-7">-->
+            <!--            <div class="ceromony-content ceromony-content2 p-2">-->
+            <!--                <p class='h2' style='color:#7e2ee7;'><u>Wedding Ceremony</u></p>-->
+            <!--                <span>Saturday, 25 October 2025, 7.00 pm onwards</span><br>-->
+            <!--                <span>Kalyani Thirumana Mandapam Mangadu</span><br>-->
+            <!--                <a class="popup-gmaps text-primary" href="https://maps.app.goo.gl/XusK3jhKB2FJS9ZF9" target='_blank'>See Location</a>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
        
         
   <hr>
@@ -809,6 +1105,10 @@
 });
   </script>
   
+ 
+
+
+    
 
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
